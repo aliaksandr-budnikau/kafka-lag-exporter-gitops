@@ -11,7 +11,7 @@ labels:
 
 resources:
   - ../../base
-  - ../../../secrets/kafka-credentials.yaml
+  - kafka-credentials.yaml
 
 images:
   - name: kafka-lag-exporter
