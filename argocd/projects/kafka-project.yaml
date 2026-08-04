@@ -1,0 +1,36 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: kafka-platform
+  namespace: argocd
+spec:
+  description: Kafka platform and observability
+  sourceRepos:
+    - "git://192.168.0.240/kafka-lag-exporter-gitops.git"
+  destinations:
+    - namespace: kafka
+      server: https://kubernetes.default.svc
+    - namespace: kafka-dev
+      server: https://kubernetes.default.svc
+    - namespace: argocd
+      server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+    - group: ""
+      kind: Namespace
+    - group: apiextensions.k8s.io
+      kind: CustomResourceDefinition
+    - group: rbac.authorization.k8s.io
+      kind: ClusterRole
+    - group: rbac.authorization.k8s.io
+      kind: ClusterRoleBinding
+  namespaceResourceWhitelist:
+    - group: "kafka.strimzi.io"
+      kind: "*"
+    - group: "monitoring.coreos.com"
+      kind: "*"
+    - group: ""
+      kind: "*"
+    - group: "apps"
+      kind: "*"
+  orphanedResources:
+    warn: true
