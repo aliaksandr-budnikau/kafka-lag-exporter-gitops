@@ -23,6 +23,10 @@ spec:
       kind: ClusterRole
     - group: rbac.authorization.k8s.io
       kind: ClusterRoleBinding
+    - group: argoproj.io
+      kind: Application
+    - group: argoproj.io
+      kind: ApplicationSet
   namespaceResourceWhitelist:
     - group: "kafka.strimzi.io"
       kind: "*"
