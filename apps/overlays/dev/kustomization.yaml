@@ -6,7 +6,8 @@ namespace: kafka-dev
 namePrefix: dev-
 
 labels:
-  environment: dev
+  - pairs:
+      environment: dev
 
 resources:
   - ../../base

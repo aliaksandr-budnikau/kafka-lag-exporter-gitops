@@ -6,7 +6,8 @@ namespace: kafka
 namePrefix: prod-
 
 labels:
-  environment: prod
+  - pairs:
+      environment: prod
 
 resources:
   - ../../base
