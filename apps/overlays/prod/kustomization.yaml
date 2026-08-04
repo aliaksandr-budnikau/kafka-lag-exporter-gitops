@@ -5,7 +5,7 @@ namespace: kafka
 
 namePrefix: prod-
 
-commonLabels:
+labels:
   environment: prod
 
 resources:

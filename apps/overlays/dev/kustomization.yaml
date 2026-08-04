@@ -5,7 +5,7 @@ namespace: kafka-dev
 
 namePrefix: dev-
 
-commonLabels:
+labels:
   environment: dev
 
 resources:

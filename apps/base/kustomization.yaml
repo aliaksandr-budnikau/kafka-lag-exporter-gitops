@@ -16,5 +16,5 @@ commonLabels:
 
 images:
   - name: kafka-lag-exporter
-    newName: ghcr.io/aliaksandr-budnikau/kafka-lag-exporter
+    newName: host.docker.internal:5000/kafka-lag-exporter
     newTag: v1.0.0
