@@ -6,7 +6,7 @@ metadata:
 spec:
   description: Kafka platform and observability
   sourceRepos:
-    - "git://192.168.0.240/kafka-lag-exporter-gitops.git"
+    - "https://github.com/aliaksandr-budnikau/kafka-lag-exporter-gitops.git"
   destinations:
     - namespace: kafka
       server: https://kubernetes.default.svc

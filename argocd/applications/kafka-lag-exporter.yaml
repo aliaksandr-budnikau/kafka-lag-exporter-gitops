@@ -10,7 +10,7 @@ metadata:
 spec:
   project: kafka-platform
   source:
-    repoURL: git://192.168.0.240/kafka-lag-exporter-gitops.git
+    repoURL: https://github.com/aliaksandr-budnikau/kafka-lag-exporter-gitops.git
     targetRevision: main
     path: apps/overlays/prod
   destination:
