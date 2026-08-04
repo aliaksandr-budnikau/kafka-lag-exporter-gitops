@@ -32,5 +32,7 @@ spec:
       kind: "*"
     - group: "apps"
       kind: "*"
+    - group: argoproj.io
+      kind: Application
   orphanedResources:
     warn: true
